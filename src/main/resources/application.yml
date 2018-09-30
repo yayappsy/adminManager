@@ -1,0 +1,49 @@
+#springboot_config
+server:
+    port: 8088
+
+logging:
+  config: classpath:logback.xml
+
+# jdbc_config
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.98.161.223:3306/base?characterEncoding=utf8
+    username: root
+    password: Dx434125Asf
+    filters: stat,wall,log4j
+
+# jpa 
+  jpa:
+    show-sql: true
+    properties:
+      jadira:
+        usertype:
+          autoRegisterUserTypes: true
+    hibernate:
+      ddl-auto: none
+
+# freemarker config
+  freemarker:
+    allow-request-override: false
+    allow-session-override: false
+    cache: false
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    enabled: true
+    expose-request-attributes: false
+    expose-session-attributes: false
+    expose-spring-macro-helpers: true
+    prefer-file-system-access: true
+    suffix: .ftl
+    template-loader-path: classpath:/templates/
+    settings:
+      template_update_delay: 0
+      default_encoding: UTF-8
+      classic_compatible: true
+      date_format: yyyy-MM-dd
+      time_format: HH:mm:ss
+      datetime_format: yyyy-MM-dd HH:mm:ss

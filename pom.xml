@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>net.sppan</groupId>
-	<artifactId>SPPanAdmin</artifactId>
+	<artifactId>adminManager</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<repositories>
 		<repository>
@@ -118,7 +118,17 @@
 		    <groupId>org.springframework.boot</groupId>  
 		    <artifactId>spring-boot-devtools</artifactId>  
 		    <optional>true</optional><!-- optional=true,依赖不会传递，该项目依赖devtools；之后依赖myboot项目的项目如果想要使用devtools，需要重新引入 -->  
-		</dependency>  
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.18</version>
+			<scope>provided</scope>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
