@@ -1,11 +1,6 @@
 package net.sppan.base.config.shiro;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.annotation.Resource;
-
+import net.sppan.base.service.IResourceService;
 import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.cache.MemoryConstrainedCacheManager;
 import org.apache.shiro.mgt.DefaultSecurityManager;
@@ -18,7 +13,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.context.annotation.Import;
 
-import net.sppan.base.service.IResourceService;
+import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Configuration
 @Import(ShiroManager.class)

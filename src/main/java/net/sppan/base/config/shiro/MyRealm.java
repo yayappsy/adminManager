@@ -1,22 +1,11 @@
 package net.sppan.base.config.shiro;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import net.sppan.base.common.utils.MD5Utils;
 import net.sppan.base.entity.Resource;
 import net.sppan.base.entity.Role;
 import net.sppan.base.entity.User;
 import net.sppan.base.service.IUserService;
-
-import org.apache.shiro.authc.AuthenticationException;
-import org.apache.shiro.authc.AuthenticationInfo;
-import org.apache.shiro.authc.AuthenticationToken;
-import org.apache.shiro.authc.IncorrectCredentialsException;
-import org.apache.shiro.authc.LockedAccountException;
-import org.apache.shiro.authc.SimpleAuthenticationInfo;
-import org.apache.shiro.authc.UnknownAccountException;
-import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.authc.*;
 import org.apache.shiro.authc.credential.AllowAllCredentialsMatcher;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
@@ -24,6 +13,9 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * 

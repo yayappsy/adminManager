@@ -1,19 +1,17 @@
 package net.sppan.base.service.support.impl;
 
-import java.io.Serializable;
-import java.util.Arrays;
-import java.util.List;
-
-import javax.transaction.Transactional;
-
 import net.sppan.base.dao.support.IBaseDao;
 import net.sppan.base.entity.support.BaseEntity;
 import net.sppan.base.service.support.IBaseService;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
+
+import javax.transaction.Transactional;
+import java.io.Serializable;
+import java.util.Arrays;
+import java.util.List;
 
 @Transactional
 public abstract class BaseServiceImpl<T extends BaseEntity, ID extends Serializable> implements IBaseService<T, ID> {

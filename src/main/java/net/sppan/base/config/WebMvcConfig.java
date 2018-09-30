@@ -1,10 +1,9 @@
 package net.sppan.base.config;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.alibaba.fastjson.support.config.FastJsonConfig;
+import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter4;
 import net.sppan.base.config.intercepter.CommonIntercepter;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -15,9 +14,8 @@ import org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.alibaba.fastjson.support.config.FastJsonConfig;
-import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter4;
+import java.util.ArrayList;
+import java.util.List;
 
 @Configuration
 public class WebMvcConfig extends WebMvcConfigurerAdapter {

@@ -1,11 +1,11 @@
 package net.sppan.base.common;
 
+import org.apache.commons.lang3.time.DateUtils;
+
 import java.beans.PropertyEditorSupport;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import org.apache.commons.lang3.time.DateUtils;
 
 public class DateEditor extends PropertyEditorSupport {
 

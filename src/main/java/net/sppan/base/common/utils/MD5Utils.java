@@ -1,10 +1,10 @@
 package net.sppan.base.common.utils;
 
+import org.springframework.util.StringUtils;
+
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-
-import org.springframework.util.StringUtils;
 
 
 

@@ -1,13 +1,9 @@
-package net.sppan.base.entity;
+package net.sppan.base.entity.word;
 
 import lombok.Data;
 import net.sppan.base.entity.support.BaseEntity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import java.io.Serializable;
+import javax.persistence.*;
 
 /**
  * @author: ChenWenLong
@@ -23,19 +19,10 @@ public class Means extends BaseEntity {
 
     @Id
     @GeneratedValue
+    @Column(name = "ID")
     private Integer id;
-    /**
-     * wordid
-     */
-    private int wordid;
 
-    /**
-     * posid
-     */
-    private int posid;
 
-    /**
-     * means
-     */
     private String means;
+
 }

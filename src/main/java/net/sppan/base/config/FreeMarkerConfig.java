@@ -1,11 +1,10 @@
 package net.sppan.base.config;
 
-import javax.annotation.PostConstruct;
-
 import net.sppan.base.config.shiro.freemarker.ShiroTags;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+
+import javax.annotation.PostConstruct;
 
 @Configuration
 public class FreeMarkerConfig {

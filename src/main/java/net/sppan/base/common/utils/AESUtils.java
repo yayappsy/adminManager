@@ -1,11 +1,10 @@
 package net.sppan.base.common.utils;
 
-import java.io.UnsupportedEncodingException;
-import java.util.Arrays;
-
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
+import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
 
 /**
  * AES对称加密

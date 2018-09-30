@@ -1,9 +1,8 @@
 package net.sppan.base.controller.admin;
 
+import net.sppan.base.controller.BaseController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import net.sppan.base.controller.BaseController;
 
 @Controller
 public class AdminIndexController extends BaseController{

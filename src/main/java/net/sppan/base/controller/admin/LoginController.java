@@ -1,7 +1,6 @@
 package net.sppan.base.controller.admin;
 
 import net.sppan.base.controller.BaseController;
-
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;

@@ -4,6 +4,7 @@ import freemarker.core.Environment;
 import freemarker.template.*;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
+
 import java.io.IOException;
 import java.util.Map;
 
