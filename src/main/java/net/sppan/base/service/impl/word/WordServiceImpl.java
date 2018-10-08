@@ -44,7 +44,7 @@ public class WordServiceImpl extends BaseServiceImpl<Word,Integer> implements IW
     }
 
     @Override
-    public Page<Word> query(final String word, final String means) {
+    public Page<Word> query(final String word, final String means, Integer page, Integer size) {
         return wordDao.findAll(new Specification<Word>() {
             @Override
             public Predicate toPredicate(Root<Word> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder cb) {
@@ -53,11 +53,11 @@ public class WordServiceImpl extends BaseServiceImpl<Word,Integer> implements IW
                     list.add(cb.like(root.get("means").as(String.class), means));
                 }
                 if (StringUtils.isNoneBlank(word)) {
-                    list.add(cb.like(root.get("word").as(String.class), "%" + word + "%"));
+                    list.add(cb.equal(root.get("word").as(String.class), word));
                 }
                 Predicate[] p = new Predicate[list.size()];
                 return cb.and(list.toArray(p));
             }
-        }, new PageRequest(1, 10));
+        }, new PageRequest(page, size));
     }
 }

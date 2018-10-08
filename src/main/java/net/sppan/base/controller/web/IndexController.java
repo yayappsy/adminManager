@@ -1,5 +1,6 @@
 package net.sppan.base.controller.web;
 
+import com.alibaba.fastjson.JSONObject;
 import net.sppan.base.controller.BaseController;
 import net.sppan.base.entity.word.Means;
 import net.sppan.base.entity.word.Word;
@@ -32,7 +33,8 @@ public class IndexController extends BaseController{
 	@ResponseBody
 	public Object index() {
 		Means means = meansService.find(1);
-		Page<Word> query = wordService.query("get", null);
-		return query;
+		Page<Word> query = wordService.query("get", null, 0, 10);
+		Object o = JSONObject.toJSON(query);
+		return o;
 	}
 }

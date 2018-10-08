@@ -13,5 +13,5 @@ public interface IWordService extends IBaseService<Word,Integer> {
 
     Word get(String word);
 
-    Page<Word> query(final String word, final String means);
+    Page<Word> query(final String word, final String means, Integer page, Integer size);
 }
