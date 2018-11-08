@@ -36,7 +36,7 @@ public class LoginController extends BaseController {
         return "admin/login";
     }
 
-    @RequestMapping(value = {"/admin/login"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"user/login"}, method = RequestMethod.POST)
     @ResponseBody
     public JsonResult loginRestful(@RequestParam("username") String username,
                             @RequestParam("password") String password
