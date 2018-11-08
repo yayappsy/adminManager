@@ -32,6 +32,11 @@ public class IndexController extends BaseController{
 	@RequestMapping(value = {"/", "/index"})
 	@ResponseBody
 	public Object index() {
+		String serverName = request.getServerName();
+		System.out.println(serverName);
+		String requestURL = request.getRequestURI();
+		System.out.println(requestURL);
+
 		Means means = meansService.find(1);
 		Page<Word> query = wordService.query("get", null, 0, 10);
 		Object o = JSONObject.toJSON(query);
