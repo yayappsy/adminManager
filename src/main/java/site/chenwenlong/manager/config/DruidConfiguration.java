@@ -40,8 +40,8 @@ public class DruidConfiguration {
 
     /**
      * 注册一个：filterRegistrationBean
-     * @return
-     *      
+     *
+     * @return      
      */
     @Bean
     public FilterRegistrationBean druidStatFilter() {

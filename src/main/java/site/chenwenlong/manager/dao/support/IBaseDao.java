@@ -1,9 +1,9 @@
 package site.chenwenlong.manager.dao.support;
 
-import site.chenwenlong.manager.entity.support.BaseEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.repository.NoRepositoryBean;
+import site.chenwenlong.manager.entity.support.BaseEntity;
 
 import java.io.Serializable;
 

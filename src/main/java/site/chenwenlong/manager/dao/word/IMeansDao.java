@@ -1,8 +1,8 @@
 package site.chenwenlong.manager.dao.word;
 
+import org.springframework.stereotype.Repository;
 import site.chenwenlong.manager.dao.support.IBaseDao;
 import site.chenwenlong.manager.entity.word.Means;
-import org.springframework.stereotype.Repository;
 
 /**
  * @author: ChenWenLong

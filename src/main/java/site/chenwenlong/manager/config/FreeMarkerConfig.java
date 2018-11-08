@@ -1,8 +1,8 @@
 package site.chenwenlong.manager.config;
 
-import site.chenwenlong.manager.config.shiro.freemarker.ShiroTags;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import site.chenwenlong.manager.config.shiro.freemarker.ShiroTags;
 
 import javax.annotation.PostConstruct;
 
@@ -14,10 +14,10 @@ public class FreeMarkerConfig {
 
     @PostConstruct
     public void setSharedVariable() {
-    	try {
-			configuration.setSharedVariable("shiro", new ShiroTags());
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+        try {
+            configuration.setSharedVariable("shiro", new ShiroTags());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

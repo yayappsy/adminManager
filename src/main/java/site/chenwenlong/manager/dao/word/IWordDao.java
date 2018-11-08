@@ -1,8 +1,8 @@
 package site.chenwenlong.manager.dao.word;
 
+import org.springframework.stereotype.Repository;
 import site.chenwenlong.manager.dao.support.IBaseDao;
 import site.chenwenlong.manager.entity.word.Word;
-import org.springframework.stereotype.Repository;
 
 /**
  * @author: ChenWenLong
@@ -10,9 +10,10 @@ import org.springframework.stereotype.Repository;
  * @Description:
  */
 @Repository
-public interface IWordDao extends IBaseDao<Word,Integer> {
+public interface IWordDao extends IBaseDao<Word, Integer> {
     /**
      * 单词查询
+     *
      * @param word
      * @return
      */

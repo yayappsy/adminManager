@@ -4,7 +4,7 @@ import freemarker.template.SimpleHash;
 
 /**
  * Shortcut for injecting the tags into Freemarker
- *
+ * <p>
  * <p>Usage: cfg.setSharedVeriable("shiro", new ShiroTags());</p>
  */
 public class ShiroTags extends SimpleHash {

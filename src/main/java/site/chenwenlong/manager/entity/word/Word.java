@@ -32,11 +32,11 @@ public class Word extends BaseEntity {
 
     private Integer times;
 
-    @ManyToMany(cascade = { CascadeType.REFRESH }, fetch = FetchType.LAZY)
-    @JoinTable(name = "word_means", joinColumns = { @JoinColumn(name = "wordID") }, inverseJoinColumns = { @JoinColumn(name = "posID") })
+    @ManyToMany(cascade = {CascadeType.REFRESH}, fetch = FetchType.LAZY)
+    @JoinTable(name = "word_means", joinColumns = {@JoinColumn(name = "wordID")}, inverseJoinColumns = {@JoinColumn(name = "posID")})
     private Set<Pos> posList;
 
-    @OneToMany(cascade = { CascadeType.REFRESH }, fetch = FetchType.LAZY)
+    @OneToMany(cascade = {CascadeType.REFRESH}, fetch = FetchType.LAZY)
     @JoinColumn(name = "wordID")
     private List<Means> means;
 

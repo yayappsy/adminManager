@@ -1,12 +1,12 @@
 package site.chenwenlong.manager.service.support.impl;
 
-import site.chenwenlong.manager.dao.support.IBaseDao;
-import site.chenwenlong.manager.entity.support.BaseEntity;
-import site.chenwenlong.manager.service.support.IBaseService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
+import site.chenwenlong.manager.dao.support.IBaseDao;
+import site.chenwenlong.manager.entity.support.BaseEntity;
+import site.chenwenlong.manager.service.support.IBaseService;
 
 import javax.transaction.Transactional;
 import java.io.Serializable;
@@ -23,7 +23,7 @@ public abstract class BaseServiceImpl<T extends BaseEntity, ID extends Serializa
         return getBaseDao().findOne(id);
     }
 
-    @Override	
+    @Override
     public List<T> findAll() {
         return getBaseDao().findAll();
     }

@@ -15,7 +15,7 @@ public abstract class PermissionTag extends SecureTag {
     String getName(Map params) {
         return getParam(params, "name");
     }
-    
+
     @Override
     protected void verifyParameters(Map params) throws TemplateModelException {
         String permission = getName(params);

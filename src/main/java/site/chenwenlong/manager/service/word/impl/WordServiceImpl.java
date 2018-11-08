@@ -1,10 +1,5 @@
 package site.chenwenlong.manager.service.word.impl;
 
-import site.chenwenlong.manager.dao.support.IBaseDao;
-import site.chenwenlong.manager.dao.word.IWordDao;
-import site.chenwenlong.manager.entity.word.Word;
-import site.chenwenlong.manager.service.support.impl.BaseServiceImpl;
-import site.chenwenlong.manager.service.word.IWordService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -12,6 +7,11 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import site.chenwenlong.manager.dao.support.IBaseDao;
+import site.chenwenlong.manager.dao.word.IWordDao;
+import site.chenwenlong.manager.entity.word.Word;
+import site.chenwenlong.manager.service.support.impl.BaseServiceImpl;
+import site.chenwenlong.manager.service.word.IWordService;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -27,7 +27,7 @@ import java.util.List;
  */
 @Service
 @Transactional
-public class WordServiceImpl extends BaseServiceImpl<Word,Integer> implements IWordService {
+public class WordServiceImpl extends BaseServiceImpl<Word, Integer> implements IWordService {
 
     @Autowired
     private IWordDao wordDao;
