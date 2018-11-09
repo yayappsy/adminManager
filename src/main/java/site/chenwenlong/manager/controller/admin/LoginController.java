@@ -47,9 +47,8 @@ public class LoginController extends BaseController {
             subject.login(token);
             return JsonResult.success("ok");
         } catch (AuthenticationException e) {
-            JsonResult.failure("用户名或者密码错误！");
+            return JsonResult.failure("用户名或者密码错误！");
         }
-        return JsonResult.success("ok");
     }
 
     @RequestMapping(value = {"/admin/logout"}, method = RequestMethod.GET)
