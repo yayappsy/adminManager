@@ -15,7 +15,7 @@ spring:
     password: Dx434125Asf
     filters: stat,wall,log4j
 
-# jpa 
+# jpa
   jpa:
     show-sql: true
     properties:

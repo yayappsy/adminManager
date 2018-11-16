@@ -29,7 +29,7 @@ public class IndexController extends BaseController {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
 
-    @RequestMapping(value = {"/", "/index"})
+    @RequestMapping(value = {"/", "/api/index"})
     @ResponseBody
     public Object index() {
         String serverName = request.getServerName();
