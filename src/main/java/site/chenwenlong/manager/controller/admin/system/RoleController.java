@@ -1,5 +1,6 @@
 package site.chenwenlong.manager.controller.admin.system;
 
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
@@ -24,6 +25,7 @@ public class RoleController extends BaseController {
 
     @RequestMapping(value = {"/list"})
     @ResponseBody
+    @RequiresRoles(value = {"administrator"})
     public Page<Role> list(
             @RequestParam(value = "searchText", required = false) String searchText
     ) {

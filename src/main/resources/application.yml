@@ -1,6 +1,6 @@
 #springboot_config
 server:
-    port: 8088
+    port: 80
 
 logging:
   config: classpath:logback.xml

@@ -36,7 +36,7 @@ public class LoginController extends BaseController {
         return "admin/login";
     }
 
-    @RequestMapping(value = {"user/login"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/user/login"}, method = RequestMethod.POST)
     @ResponseBody
     public JsonResult loginRestful(@RequestParam("username") String username,
                             @RequestParam("password") String password
@@ -45,7 +45,7 @@ public class LoginController extends BaseController {
             Subject subject = SecurityUtils.getSubject();
             UsernamePasswordToken token = new UsernamePasswordToken(username, password);
             subject.login(token);
-            return JsonResult.success("ok");
+            return JsonResult.success("ok",token);
         } catch (AuthenticationException e) {
             return JsonResult.failure("用户名或者密码错误！");
         }
