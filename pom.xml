@@ -146,7 +146,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>site.chenwenlong.manager.Application</mainClass>
+					<mainClass>com.tcc2jdh.manager.Application</mainClass>
 					<fork>true</fork>
 				</configuration>
 			</plugin>
